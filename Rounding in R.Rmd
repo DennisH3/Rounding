@@ -1,0 +1,25 @@
+---
+title: "Rounding in R"
+output: html_notebook
+---
+
+```{r}
+# Default rounding
+
+# From -5 to 5 at intervals of 0.25, print the number and the rounded number
+for(i in seq(from = -5, to = 5, by = 0.25)){
+  print(paste("The number is:", i, "   Rounded:", round(i)))
+}
+```
+```{r}
+# Traditional Rounding
+# Note there are several other packages that have a round2 function that does traditional rounding
+# numform was chosen because it offers many numerical formatting functions
+install.packages("numform")
+
+# From -5 to 5 at intervals of 0.25, print the number and the rounded number
+for(i in seq(from = -5, to = 5, by = 0.25)){
+  print(paste("The number is:", i, "   Rounded:", numform::round2(i)))
+}
+```
+
